@@ -1,0 +1,172 @@
+@use '../abstracts/variables' as vars;
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.hero {
+    display: flex;
+
+&__texto {
+    max-width: 50%;
+
+    .hero__title {
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            line-height: 60px;
+        }
+
+        p {
+            margin-bottom: 40px;
+            color: vars.$grey;
+            font-size: 17px;
+            line-height: 30px;
+            width: 85%;
+        }
+    }
+        .btn__hero {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+            img {
+                padding: 10px;
+                background-color: white;
+                border-radius: 50%;
+                box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); // Sombra suave
+                transition: box-shadow 0.3s ease-in-out, transform 0.6s ease-in-out;
+                &:hover {
+                    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+                    transform: scale(1.1);
+            }
+        }
+    }
+        a {
+            text-decoration: none;
+        }
+        .btn1 {
+            background-color: vars.$blue-dark;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 32px;
+            transition: all 0.3s ease;
+            border: solid 2px transparent;
+            &:hover {
+                background-color: white;
+                color: vars.$blue-dark;
+                border: solid 2px vars.$blue-dark;
+            }
+            
+        }
+        .btn2 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            &:hover img{
+                box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+                transform: scale(1.1);
+            }
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            align-items: center;
+            text-align: center;
+            width: 70%;
+           
+            article {
+                text-align: center;
+                justify-items: center;
+            }
+            img {
+                margin-bottom: 10px;
+                width: 50px;
+            }
+            .number__title {
+                margin-bottom: 10px;
+                font-size: 25px;
+                font-weight: 500;
+            }
+            .number__description {
+                color: vars.$grey;
+                font-size: 14px;
+                width: 80%;
+            }
+        }
+        
+    }
+
+    .hero__img {
+        position: relative;
+
+        .img__woman{
+            width: 600px;
+            height: auto;
+            position: absolute;
+            top: -54px;
+            left: -160px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            top: -76px;
+            left: 50px;
+            width: 500px;
+            height: 500px;
+            background: url("/img/flor-fondo.png") no-repeat;
+            background-size: 450px;
+            opacity: 0.05;
+            z-index: -2;
+        }
+
+        .review {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+
+            
+            article {
+                margin-bottom: 20px;
+                width: 270px;
+                background-color: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(5px);
+                border-radius: 10px;
+                padding: 10px;
+                position: absolute;
+
+            &.arriba{
+                top: 180px;
+                left: 290px;
+                
+            }
+            &.abajo{
+                bottom: -570px;
+                left: 200px;
+                
+            }
+
+            }
+        
+            .description {
+              font-size: 13px;
+              color: #070D15;
+            }
+        
+            .autor {
+              font-size: 14px;
+              font-weight: 600;
+              color: vars.$blue-dark; 
+            }
+          }
+    }
+}
+
+
+
